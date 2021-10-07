@@ -1,0 +1,4 @@
+What is debugging?
+Debugging is the process of finding and removing errors in a program.
+In this process, the program is thoroughly checked for errors.
+Then errors are pointed out and debugged.
