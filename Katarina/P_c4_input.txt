@@ -1,0 +1,16 @@
+Following a consistent programming style often helps readability. However, readability is more than just 
+programming style. Many factors, having little or nothing to do with the ability of the computer to
+efficiently compile and execute the code, contribute to readability. Some of these factors include:
+/
+/
+1)Different indent styles (whitespace)
+/
+2)Comments
+/
+3)Decomposition
+/
+4)Naming conventions for objects (such as variables, classes, procedures, etc.)
+/
+/
+The presentation aspects of this (such as indents, line breaks, color highlighting, and so on) are often
+handled by the source code editor, but the content aspects reflect the programmer's talent and skills.
