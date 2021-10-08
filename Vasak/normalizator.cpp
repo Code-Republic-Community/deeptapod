@@ -133,15 +133,6 @@ std::string normalizer(std::string word){
 	//ending with -ed
 	else if(word.substr(word.size()-2, word.size()) == "ed"){
 
-		if(word=="fed"){		//simple past case (feed - fed)
-			word = "feed";
-			return word;
-		}
-		if(word=="led"){		//simple past case (lead - led)
-			word = "lead";
-			return word;
-		}
-
 		std::string normalized = word.substr(0, word.size()-2);   //cut the "-ed"
 
 		if(is_word(normalized + 'e')){		//the case when 'e' is dropped (admire - admired)
@@ -162,37 +153,7 @@ std::string normalizer(std::string word){
 
 	//ending with -nt    (might have been -n't, xosqi` "didn't", "haven't")
 	else if(word.substr(word.size()-2, word.size()) == "nt"){
-		
-		if(is_word(word)){		//for example` "fluent", "eloquent", "amount", "amusement", "agent"
-			return word;
-		}
-		else if(word=="bent"){		//simple past (bend - bent)
-			word = "bend";
-			return word;
-		}
-		else if(word=="burnt"){
-			word = "burn";
-			return word;
-		}
-		else if(word=="learnt"){
-			word = "learn";
-			return word;
-		}
-		else if(word=="meant"){
-			word = "mean";
-			return word;
-		}
-
-		else if(word=="sent"){
-			word = "send";
-			return word;
-		}
-
-		else if(word=="spent"){
-			word = "spend";
-			return word;
-		}
-		
+			
 		std::string normalized = word.substr(0, word.size()-2);   //cut the "-nt"
 
 		if(is_word(normalized)){		//havent - have
@@ -208,10 +169,6 @@ std::string normalizer(std::string word){
 
 	//ending with -re ("you're" darcel a "youre")
 	else if(word.substr(word.size()-2, word.size()-1) == "re"){
-		
-		if(is_word(word)){	//xosqi "acquire", "where", "admire", "dare"
-			return word;
-		}
 
 		std::string normalized = word.substr(0, word.size()-2);   //cut the "-re" ("youre" becomes "you")
 		
