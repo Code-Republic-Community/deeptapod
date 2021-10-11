@@ -1,9 +1,10 @@
+#ifndef DATABASE_H_
+#define DATABASE_H_
+
 #include <vector>
 #include <string>
 #include <map>
 
-#ifndef DATABASE_H_
-#define DATABASE_H_
 std::vector<std::string> wordsDB = {"let","bring","help","when","first","eve","drop","please","learn","lesson","crazy","crasy""favorite","touch","there","discuss","review","code","song","book","read","flower","gather","here","and","good","sing","king","dance","can","have","be","boy","girl","chair","admire","include","car","care", "wrap" };
 
 std::map<std::string, std::string> pronounsDB = {
