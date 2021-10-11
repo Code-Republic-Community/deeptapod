@@ -1,3 +1,6 @@
+/*this is a file that contains a function that normalizes a given word. To implement that function I used 2 more functions: first one to split the sentence into words, and the second one to search for a word in the database to find a matching word.
+In the main normalizer function I considered that the word may be a indirect form of pronoun, may be one of the irregular verbs, may end with -ing, -es, -s, -'s, -ed, -n't, -'re, -'ve. */
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -26,7 +29,8 @@ std::vector<std::string> text_to_vector(std::string& text){
 	    }
 
 	    //if the symbol is number '0' but his right or left sides are letters, then we can consider that there must be the letter 'o' in spite of '0'
-	    else if((i!=0)&&(i<text.size())&&(text[i]=='0') && ((text[i-1]>='A'&&text[i-1]<='Z' || text[i-1]>='a'&&text[i-1]<='z') || (text[i+1]>='A'&&text[i+1]<='Z' || text[i+1]>='a'&&text[i+1]<='z'))){			strWord += 'o';
+	    else if((i!=0)&&(i<text.size())&&(text[i]=='0') && ((text[i-1]>='A'&&text[i-1]<='Z' || text[i-1]>='a'&&text[i-1]<='z') || (text[i+1]>='A'&&text[i+1]<='Z' || text[i+1]>='a'&&text[i+1]<='z'))){
+                    strWord += 'o';
 	    }
 	    else if(text[i]>='0' && text[i]<='9'){
 		    strNum += text[i];
