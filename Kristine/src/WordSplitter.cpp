@@ -89,7 +89,7 @@ void is_abbrev(std::string &word, int &size, int &flag){
        	inFile.close();
 }	
 
-/* int main(){
+int main(){
 
         std::vector<std::string> testCase;
         testCase = wordSplitter("\"See you tomorrow at 5 p.m.,\" said Ann.");
@@ -98,4 +98,3 @@ void is_abbrev(std::string &word, int &size, int &flag){
         }
         return 0;
 }
-*/
