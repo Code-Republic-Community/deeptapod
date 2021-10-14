@@ -1,0 +1,2 @@
+C++ compiles down to machine code whereas C# 'compiles' down to CLR (Common Language Runtime), which is 
+interpreted by JIT in ASP.NET..
