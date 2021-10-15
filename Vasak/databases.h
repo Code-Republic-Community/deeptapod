@@ -61,6 +61,7 @@ std::map<std::string, std::string> irregularVerbsDB = {
 	{"chosen", "choose"},
 	{"came", "come"},
 	{"dug", "dig"},
+	{"dealt", "deal"},
 	{"did", "do"},
 	{"done", "do"},
 	{"drew", "drow"},
