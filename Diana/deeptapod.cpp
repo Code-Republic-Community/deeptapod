@@ -30,11 +30,11 @@ class Word
     void addPuzzle(const std::string& puzzle) { puzzles.push_back(puzzle); }
     
     public:
-    std::string getWord() { return word;}
-   // std::string getNumber() { return number;}
-   // std::string getTense() { return tense;}
-    std::string getGenus() { return genus;}
-    std::string getTranscription() { return transcription;}
+    std::string getWord() const { return word;}
+   // std::string getNumber() const { return number;}
+   // std::string getTense() const { return tense;}
+    std::string getGenus() const { return genus;}
+    std::string getTranscription() const { return transcription;}
     
     public:
     std::vector<std::string> getHomophones() { return homophones; }
