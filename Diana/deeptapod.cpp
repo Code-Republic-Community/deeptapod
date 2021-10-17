@@ -5,6 +5,10 @@
 class Word
 {
     public:
+    Word() {};
+    friend std::ostream& operator<<(std::ostream &out, const Word& word);
+    
+    public:
     void setWord(const std::string& word) { this->word = word;}
    // void setNumber(const std::string& number) { this->number = number;}
    // void setTense(const std::string& tense) { this->tense = tense;}
@@ -37,33 +41,29 @@ class Word
     std::string getTranscription() const { return transcription;}
     
     public:
-    std::vector<std::string> getHomophones() { return homophones; }
-    std::vector<std::string> getMeaning() { return meanings; }
-    std::vector<std::string> getPartOfWord() { return partOfWord; }
-    std::vector<std::string> getSynonyms() { return synonyms; }
-    std::vector<std::string> getAntonyms() { return antonyms; }
-    std::vector<std::string> getInflectedForms() { return inflectedForms; }
-    std::vector<std::string> getNarrowerTerms() { return narrowerTerms; }
-    std::vector<std::string> getBroaderTerms() { return broaderTerms;}
-    std::vector<std::string> getLexicallyCloseWords() { return lexicallyCloseWords; }
-    std::vector<std::string> getAnagrams() { return anagrams; }
-    std::vector<std::string> getInternetDomains() { return internetDomains; }
-    std::vector<std::string> getEntities() { return entities; }
-    std::vector<std::string> getPhrases() { return phrases; }
-    std::vector<std::string> getPrepositions() { return prepositions; }
-    std::vector<std::string> getHyphenitions() { return hyphenitions; }
-    std::vector<std::string> getPuzzles() { return puzzles; }
-    
-    public:
-    Word(){};
-    friend std::ostream& operator<<(std::ostream &out, const Word& word);
+    std::vector<std::string> getHomophones() const { return homophones; }
+    std::vector<std::string> getMeaning() const { return meanings; }
+    std::vector<std::string> getPartOfWord() const { return partOfWord; }
+    std::vector<std::string> getSynonyms() const { return synonyms; }
+    std::vector<std::string> getAntonyms() const { return antonyms; }
+    std::vector<std::string> getInflectedForms() const { return inflectedForms; }
+    std::vector<std::string> getNarrowerTerms() const { return narrowerTerms; }
+    std::vector<std::string> getBroaderTerms() const { return broaderTerms;}
+    std::vector<std::string> getLexicallyCloseWords() const { return lexicallyCloseWords; }
+    std::vector<std::string> getAnagrams() const { return anagrams; }
+    std::vector<std::string> getInternetDomains() const { return internetDomains; }
+    std::vector<std::string> getEntities() const { return entities; }
+    std::vector<std::string> getPhrases() const { return phrases; }
+    std::vector<std::string> getPrepositions() const { return prepositions; }
+    std::vector<std::string> getHyphenitions() const { return hyphenitions; }
+    std::vector<std::string> getPuzzles() const { return puzzles; }
     
     private:
-    std::string word;
-   // std::string number;                          
-   // std::string tense;
-    std::string genus;                       //male/female
-    std::string transcription;               //pronunciation         
+    std::string m_word;
+   // std::string m_number;                          
+   // std::string m_tense;
+    std::string m_genus;                       //male/female
+    std::string m_transcription;               //pronunciation         
  
     private:
     std::vector<std::string> homophones;     //same pronunciations different forms
@@ -84,15 +84,6 @@ class Word
     std::vector<std::string> puzzles;         //all combinations of word's characters
     
 };
-
-/*Word::Word()
-{
-    word = "";
-   // number = "";                      
-   // tense = "";
-    genus = "";
-    transcription = "";                            
-}*/
 
 std::ostream& operator<<(std::ostream &out, const Word& term)
 {
@@ -174,7 +165,7 @@ int main()
 {
     Word word;
     word.setWord("developers");
-//    word.setNumber("plural");
+//  word.setNumber("plural");
     word.setTranscription("[div'elhuperz]");
     word.addMeaning("The coolest guys");
     word.addPartOfWord("noun");
